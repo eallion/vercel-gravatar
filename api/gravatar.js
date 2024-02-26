@@ -30,7 +30,8 @@ async function fetchAndApply(request) {
     let status = original_response.status;
 
     new_response_headers.set("access-control-allow-origin", "https://www.eallion.com");
-    new_response_headers.set("access-control-allow-origin", "https://eallion.com");
+    new_response_headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    new_response_headers.set("Access-Control-Allow-Headers", "Content-Type");
     new_response_headers.set(
         "Cache-Control",
         "max-age=600, s-maxage=2592000, stale-while-revalidate"
